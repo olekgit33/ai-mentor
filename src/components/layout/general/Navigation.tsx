@@ -3,7 +3,6 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import { Button, BrandLogo } from '@/components'
-import brand from '@/brand/config'
 
 interface User {
   id: string

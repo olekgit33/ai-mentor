@@ -3,7 +3,6 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import { BrandLogo } from '@/components'
-import brand from '@/brand/config'
 
 interface ChatHeaderProps {
   isMobile: boolean

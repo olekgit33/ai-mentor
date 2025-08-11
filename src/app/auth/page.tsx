@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { useForm, useTimeout } from '@/hooks'
 import { LoadingSpinner, ProtectedRoute, Button, AlertMessage, FormInput, AuthHeader, AuthCard } from '@/components'
+import brand from '@/brand/config'
 
 interface AuthFormData extends Record<string, unknown> {
   email: string
@@ -88,7 +89,7 @@ const AuthPage = () => {
   return (
     <AuthCard>
       <AuthHeader
-        title={`Welcome to ${require('@/brand/config').default.name}`}
+        title={`Welcome to ${brand.name}`}
         subtitle={isLogin ? 'Sign in to your account' : 'Create your account'}
       />
 
