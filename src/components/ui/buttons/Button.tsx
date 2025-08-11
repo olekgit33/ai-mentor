@@ -22,10 +22,10 @@ const Button: React.FC<ButtonProps> = ({
   const baseClasses = 'font-medium rounded-lg transition-all duration-300 cursor-pointer shadow-lg hover:shadow-xl hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100'
   
   const variants = {
-    primary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700',
-    secondary: 'bg-white/90 text-purple-900 hover:bg-white backdrop-blur-sm',
+    primary: 'bg-gradient-to-r from-teal-600 to-emerald-600 text-white hover:from-teal-700 hover:to-emerald-700',
+    secondary: 'bg-white/90 text-teal-900 hover:bg-white backdrop-blur-sm',
     ghost: 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/40',
-    outline: 'bg-white/90 text-purple-900 hover:bg-white'
+    outline: 'bg-white/90 text-teal-900 hover:bg-white'
   }
   
   const sizes = {

@@ -10,7 +10,7 @@ const AuthCard: React.FC<AuthCardProps> = ({
   className = ''
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-blue-500 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-teal-500 via-cyan-600 to-emerald-600 flex items-center justify-center p-4">
       <div className={`bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 w-full max-w-md ${className}`}>
         {children}
       </div>

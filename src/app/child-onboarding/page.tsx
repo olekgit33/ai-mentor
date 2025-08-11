@@ -91,7 +91,7 @@ const ChildOnboardingPage = React.memo(function ChildOnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-blue-500 flex items-center justify-center p-3 sm:p-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-teal-500 via-cyan-600 to-emerald-600 flex items-center justify-center p-3 sm:p-4 relative overflow-hidden">
       <OnboardingLogo />
       <UniversalBackground variant="particles" />
 
@@ -149,7 +149,7 @@ const ChildOnboardingPage = React.memo(function ChildOnboardingPage() {
 
 export default function ChildOnboardingPageWrapper() {
   return (
-    <ProtectedRoute requireAuth={true} requireRole="child">
+    <ProtectedRoute requireAuth={true}>
       <ChildOnboardingPage />
     </ProtectedRoute>
   )

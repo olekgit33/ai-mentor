@@ -111,7 +111,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
         <button
           onClick={onSendMessage}
           disabled={!inputMessage.trim() || isLoading}
-          className={`${buttonSize} bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 disabled:from-gray-400 disabled:to-gray-500 text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-lg transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed ${emojiSize} cursor-pointer`}
+          className={`${buttonSize} bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 disabled:from-gray-400 disabled:to-gray-500 text-white rounded-full flex items-center justify-center transition-all duration-200 shadow-lg transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed ${emojiSize} cursor-pointer`}
           title="Send message"
         >
           {isLoading ? (

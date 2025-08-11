@@ -2,6 +2,8 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import { BrandLogo } from '@/components'
+import brand from '@/brand/config'
 
 interface ChatHeaderProps {
   isMobile: boolean
@@ -24,9 +26,8 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
           {/* Left Side - Logo & Astra Info */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             {/* Logo */}
-            <div className="flex items-center space-x-2 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => router.push('/')}>
-              <div className="text-lg sm:text-xl">🎓</div>
-              <span className="text-white font-bold text-sm sm:text-base drop-shadow-lg">ONE EDU</span>
+            <div className="cursor-pointer" onClick={() => router.push('/') }>
+              <BrandLogo size="md" />
             </div>
             
             {/* Divider */}
@@ -35,7 +36,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
             {/* Astra Info */}
             <div className="flex items-center space-x-2">
               <div className="relative">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-400 via-pink-500 to-blue-500 rounded-full flex items-center justify-center text-lg shadow-lg">
+                <div className="w-8 h-8 bg-gradient-to-br from-teal-400 via-cyan-500 to-emerald-500 rounded-full flex items-center justify-center text-lg shadow-lg">
                 🧠
                 </div>
                 <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-green-400 rounded-full border border-white shadow-sm animate-pulse"></div>
@@ -55,14 +56,14 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
             <div className="hidden sm:flex items-center space-x-2">
               <button
                 onClick={onNavigateToDashboard}
-                className="px-3 py-1.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg text-sm font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-1 cursor-pointer"
+                className="px-3 py-1.5 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-lg text-sm font-medium hover:from-teal-700 hover:to-emerald-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-1 cursor-pointer"
               >
                 <span>🎯</span>
                 <span className="hidden lg:inline">Dashboard</span>
               </button>
               <button
                 onClick={onNavigateToProfile}
-                className="px-3 py-1.5 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg text-sm font-medium hover:from-green-600 hover:to-emerald-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-1 cursor-pointer"
+                className="px-3 py-1.5 bg-gradient-to-r from-cyan-600 to-teal-600 text-white rounded-lg text-sm font-medium hover:from-cyan-700 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center space-x-1 cursor-pointer"
               >
                 <span>✏️</span>
                 <span className="hidden lg:inline">Profile</span>
@@ -80,7 +81,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({
             <div className="sm:hidden flex items-center space-x-1">
               <button
                 onClick={onNavigateToDashboard}
-                className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-md hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg transform hover:scale-105 flex items-center justify-center text-sm cursor-pointer"
+                className="w-8 h-8 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-md hover:from-teal-700 hover:to-emerald-700 transition-all duration-200 shadow-lg transform hover:scale-105 flex items-center justify-center text-sm cursor-pointer"
                 title="XP Dashboard"
               >
                 🎯

@@ -30,7 +30,7 @@ export const XPProgressBar: React.FC<XPProgressBarProps> = ({
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center space-x-2">
           {/* Level indicator with gradient background */}
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+          <div className="bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-bold">
             Level {level}
           </div>
           {/* Total XP counter */}
@@ -47,11 +47,11 @@ export const XPProgressBar: React.FC<XPProgressBarProps> = ({
       {/* Progress bar container */}
       <div className="relative w-full bg-gray-200 rounded-full h-4 overflow-hidden">
         {/* Subtle background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-100 to-pink-100"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-100 to-emerald-100"></div>
         
         {/* Animated progress fill with gradient */}
         <div
-          className="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out"
+          className="absolute top-0 left-0 h-full bg-gradient-to-r from-teal-600 to-emerald-600 rounded-full transition-all duration-1000 ease-out"
           style={{ width: `${Math.min(progressPercentage, 100)}%` }}
         >
           {/* Animated shine effect overlay */}

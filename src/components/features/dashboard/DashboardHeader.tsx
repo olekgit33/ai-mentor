@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import { BrandLogo } from '@/components'
 
 interface DashboardHeaderProps {
   onSignOut: () => void
@@ -16,9 +17,8 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ onSignOut }) => {
         {/* Mobile Layout */}
         <div className="flex items-center justify-between sm:hidden">
           {/* Logo */}
-          <div className="flex items-center space-x-2 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => router.push('/')}>
-            <div className="text-lg">🎓</div>
-            <span className="text-white font-bold text-base drop-shadow-lg">ONE EDU</span>
+          <div className="cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => router.push('/') }>
+            <BrandLogo size="md" />
           </div>
           
           {/* Mobile Menu Button */}
@@ -53,9 +53,8 @@ const DashboardHeader: React.FC<DashboardHeaderProps> = ({ onSignOut }) => {
         <div className="hidden sm:flex items-center justify-between">
           <div className="flex items-center space-x-4">
             {/* Logo */}
-            <div className="flex items-center space-x-2 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => router.push('/')}>
-              <div className="text-xl">🎓</div>
-              <span className="text-white font-bold text-lg drop-shadow-lg">ONE EDU</span>
+            <div className="cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => router.push('/') }>
+              <BrandLogo size="lg" />
             </div>
             
             {/* Divider */}

@@ -20,7 +20,7 @@ const XPNotification: React.FC<XPNotificationProps> = ({
   if (!show) return null
 
   return (
-    <div className="fixed top-16 right-2 sm:right-4 z-50 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg p-3 shadow-xl transform transition-all duration-500 ease-in-out max-w-xs">
+    <div className="fixed top-16 right-2 sm:right-4 z-50 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-lg p-3 shadow-xl transform transition-all duration-500 ease-in-out max-w-xs">
       <div className="flex items-center space-x-2">
         <div className="text-lg animate-bounce">✨</div>
         <div className="flex-1 min-w-0">

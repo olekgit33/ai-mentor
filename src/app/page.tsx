@@ -22,7 +22,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-cyan-900 to-emerald-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <UniversalBackground variant="simple" />
 

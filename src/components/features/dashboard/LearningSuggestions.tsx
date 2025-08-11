@@ -32,12 +32,12 @@ const LearningSuggestions: React.FC<LearningSuggestionsProps> = () => {
 
   return (
     <div className="relative bg-black/30 backdrop-blur-lg rounded-2xl p-4 sm:p-8 shadow-2xl border border-white/10">
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 via-cyan-500/20 to-emerald-500/20 rounded-2xl blur-xl"></div>
       
       <div className="relative z-10">
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl p-4 sm:p-6 border border-purple-400/30">
+          <div className="bg-gradient-to-r from-teal-500/20 to-emerald-500/20 rounded-xl p-4 sm:p-6 border border-teal-400/30">
             <div className="flex items-center justify-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
               <div>
                 <h4 className="text-lg sm:text-xl font-bold text-white">Ready to Learn?</h4>
@@ -47,7 +47,7 @@ const LearningSuggestions: React.FC<LearningSuggestionsProps> = () => {
             
             <button
               onClick={() => router.push('/mentor-chat')}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
+              className="bg-gradient-to-r from-teal-600 to-emerald-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:from-teal-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
             >
               <span className="mr-2">Chat with Astra</span>
             </button>

@@ -1,7 +1,7 @@
-# ONE EDU MVP - Setup Instructions
+# EduNova MVP - Setup Instructions
 
 ## Overview
-ONE EDU is an AI-powered educational platform designed to help children aged 8-13 learn real-world life skills through voice-enabled AI mentoring.
+EduNova is an AI-powered educational platform designed to help children aged 8-13 learn real-world life skills through voice-enabled AI mentoring.
 
 ## Prerequisites
 - Node.js (v20 or later)
@@ -60,8 +60,7 @@ src/
 │   ├── api/                    # API routes
 │   ├── auth/                   # Authentication page
 │   ├── child-onboarding/      # Child profile creation
-│   ├── role-selection/        # Role selection (parent/child)
-│   ├── parent-dashboard/      # Parent management dashboard
+│   ├── child-onboarding/      # Child profile creation
 │   ├── mentor-chat/          # AI mentor chat interface
 │   ├── xp-dashboard/         # XP and achievements
 │   └── layout.tsx            # Root layout with providers
@@ -89,17 +88,14 @@ src/
 
 1. **Landing Page** (`/`) - Welcome and feature overview
 2. **Authentication** (`/auth`) - Login/signup with email
-3. **Role Selection** (`/role-selection`) - Choose parent or child role
-4. **Child Onboarding** (`/child-onboarding`) - Create child profile
-5. **Parent Dashboard** (`/parent-dashboard`) - Manage children and progress (Comming soon)
-6. **Mentor Chat** (`/mentor-chat`) - AI mentor chat
-7. **XP Dashboard** (`/xp-dashboard`) - Track achievements and skills
+3. **Child Onboarding** (`/child-onboarding`) - Create child profile
+4. **Mentor Chat** (`/mentor-chat`) - AI mentor chat
+5. **XP Dashboard** (`/xp-dashboard`) - Track achievements and skills
 
 ## Features
 
 ✅ **Authentication & Profiles:**
 - Email-based authentication with Supabase
-- Role-based access (parent/child)
 - Child profile management
 - Session persistence with sessionStorage
 
@@ -118,7 +114,7 @@ src/
 - Daily streaks
 
 ✅ **Parent Features:**
-- Comming soon
+- Removed (child mode only)
 
 ## Development Features
 

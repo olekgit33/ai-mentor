@@ -1,4 +1,4 @@
--- ONE EDU DATABASE SCHEMA
+-- EduNova DATABASE SCHEMA
 -- This design has separate users and child_profiles tables
 
 -- Users table - stores basic user information

@@ -42,9 +42,14 @@ const AuthPage = () => {
         throw new Error(error.message)
       }
 
-      // If signup was successful, redirect to role selection
+      // If signup was successful, go straight to child onboarding
       if (!isLogin && !error) {
-        router.push('/role-selection')
+        router.push('/child-onboarding')
+      }
+
+      // If sign-in was successful, go to mentor chat
+      if (isLogin && !error) {
+        router.push('/mentor-chat')
       }
     }
   })
@@ -83,7 +88,7 @@ const AuthPage = () => {
   return (
     <AuthCard>
       <AuthHeader
-        title="Welcome to ONE EDU"
+        title={`Welcome to ${require('@/brand/config').default.name}`}
         subtitle={isLogin ? 'Sign in to your account' : 'Create your account'}
       />
 

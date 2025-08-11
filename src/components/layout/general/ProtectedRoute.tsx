@@ -9,7 +9,8 @@ interface ProtectedRouteProps {
   children: React.ReactNode
   requireAuth?: boolean
   redirectTo?: string
-  requireRole?: 'parent' | 'child'
+  // Role is deprecated; child mode only
+  requireRole?: 'child'
 }
 
 export default function ProtectedRoute({ 
@@ -60,52 +61,12 @@ export default function ProtectedRoute({
       return
     }
 
-    // 2nd Priority: Role existence
-    if (!user.role) {
-      console.log('🛡️ ProtectedRoute: User has no role')
-      redirect('/role-selection', 'Priority 2: No role set')
+    // Roles are deprecated; treat all authenticated users as child-mode by default
+    if (!requireAuth && redirectTo === '/auth') {
+      redirect('/mentor-chat', 'Authenticated user accessing auth page')
       return
     }
-
-    // 3rd Priority: Role type restrictions
-    if (user.role === 'parent') {
-      console.log('🛡️ ProtectedRoute: User is parent')
-      // Parent accessing child-only page
-      if (requireRole && requireRole !== 'parent') {
-        redirect('/parent-dashboard', 'Priority 3: Parent accessing child page')
-        return
-      }
-      // Parent accessing auth page when already authenticated
-      if (!requireAuth && redirectTo === '/auth') {
-        redirect('/parent-dashboard', 'Priority 3: Parent accessing auth page')
-        return
-      }
-      // Parent authorized
-      console.log('🛡️ ProtectedRoute: Parent authorized')
-      setIsAuthorized(true)
-      return
-    }
-
-    if (user.role === 'child') {
-      console.log('🛡️ ProtectedRoute: User is child')
-      // Child accessing parent-only page
-      if (requireRole && requireRole !== 'child') {
-        redirect('/mentor-chat', 'Priority 3: Child accessing parent page')
-        return
-      }
-      // Child accessing auth page when already authenticated
-      if (!requireAuth && redirectTo === '/auth') {
-        redirect('/mentor-chat', 'Priority 3: Child accessing auth page')
-        return
-      }
-      // Child authorized
-      console.log('🛡️ ProtectedRoute: Child authorized')
-      setIsAuthorized(true)
-      return
-    }
-
-    // Unknown role - redirect to role selection
-    redirect('/role-selection', 'Unknown role')
+    setIsAuthorized(true)
   }, [user, childProfile, loading, requireAuth, redirectTo, requireRole, router])
 
   // Show loading while checking authorization

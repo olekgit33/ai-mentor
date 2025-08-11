@@ -181,14 +181,15 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         .single()
 
       if (!existingUser) {
-        // Create user record immediately after sign-up, regardless of email confirmation
+        // Create user record immediately after sign-up, defaulting to child role
         const { error } = await supabase
           .from('users')
           .insert({
             auth_user_id: supabaseUser.id,
             email: supabaseUser.email!,
+            role: 'child',
           })
-
+ 
         if (error) {
           console.error('Error creating user record:', error)
           return false
@@ -221,14 +222,30 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       console.log('👤 AuthContext: User data fetched from database:', userData)
 
+      // Ensure role defaults to child for legacy users
+      let effectiveUser = userData
+      if (!effectiveUser.role) {
+        try {
+          const { data: updated } = await supabase
+            .from('users')
+            .update({ role: 'child' })
+            .eq('id', effectiveUser.id)
+            .select('*')
+            .single()
+          if (updated) effectiveUser = updated
+        } catch (e) {
+          console.warn('AuthContext: could not default role to child', e)
+        }
+      }
+
       // Fetch child profile if user is a child
       let childProfileData = null
-      if (userData.role === 'child') {
+      if (effectiveUser.role === 'child') {
         console.log('👶 AuthContext: User is child, fetching child profile')
         const { data: childData, error: childError } = await supabase
           .from('child_profiles')
           .select('*')
-          .eq('user_id', userData.id)
+          .eq('user_id', effectiveUser.id)
           .single()
 
         if (childError && childError.code !== 'PGRST116') {
@@ -241,9 +258,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       // Update state and session storage
       console.log('💾 AuthContext: Setting user state and saving to session')
-      setUser(userData)
+      setUser(effectiveUser)
       setChildProfile(childProfileData)
-      saveUserToSession(supabaseUserId, userData, childProfileData || undefined)
+      saveUserToSession(supabaseUserId, effectiveUser, childProfileData || undefined)
 
       return userData
     } catch (error) {

@@ -3,6 +3,7 @@
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components'
+import brand from '@/brand/config'
 
 interface User {
   id: string
@@ -24,9 +25,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ user, onGoToDashboard, onSign
       <div className="text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 drop-shadow-2xl animate-fade-in px-2">
           {user ? (
-            <>Welcome back to <span className="text-yellow-300 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent animate-pulse whitespace-nowrap">ONE EDU</span></>
+            <>Welcome back to <span className="text-yellow-300 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent animate-pulse whitespace-nowrap">{brand.name}</span></>
           ) : (
-            <>Welcome to <span className="text-yellow-300 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent animate-pulse whitespace-nowrap">ONE EDU</span></>
+            <>Welcome to <span className="text-yellow-300 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent animate-pulse whitespace-nowrap">{brand.name}</span></>
           )}
         </h1>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto drop-shadow-lg animate-fade-in-up px-4">

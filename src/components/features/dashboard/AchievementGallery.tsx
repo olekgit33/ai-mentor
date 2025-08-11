@@ -58,7 +58,7 @@ const AchievementGallery: React.FC<AchievementGalleryProps> = ({
             </div>
             <div className="hidden sm:block w-px h-12 bg-white/20"></div>
             <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              <div className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
                 {Math.round((earnedBadges.length / allBadges.length) * 100)}%
               </div>
               <div className="text-white/80 text-xs sm:text-sm">Complete</div>

@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'
-import { Button } from '@/components'
+import { Button, BrandLogo } from '@/components'
+import brand from '@/brand/config'
 
 interface User {
   id: string
@@ -22,10 +23,7 @@ const Navigation: React.FC<NavigationProps> = ({ user, onSignOut }) => {
     <nav className="relative bg-white/5 backdrop-blur-md border-b border-white/10 shadow-lg">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
-          <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="text-2xl sm:text-3xl drop-shadow-lg">🎓</div>
-            <h1 className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg whitespace-nowrap">ONE EDU</h1>
-          </div>
+          <BrandLogo size="lg" className="cursor-pointer hover:scale-105 transition-transform duration-300" />
           <div className="flex space-x-2 sm:space-x-4">
             {user ? (
               // Authenticated user buttons

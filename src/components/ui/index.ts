@@ -9,6 +9,7 @@ export { default as SparkleEffect } from './animation/SparkleEffect';
 // Button components
 export { default as Button } from './buttons/Button';
 export { default as LogoutButton } from './buttons/LogoutButton';
+export { default as BrandLogo } from './BrandLogo';
 
 // Card components
 export { default as FeatureCard } from './cards/FeatureCard';

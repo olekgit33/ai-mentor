@@ -64,7 +64,7 @@ const MentorChatPage = React.memo(function MentorChatPage() {
   }
 
   return (
-    <div className="h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex flex-col relative overflow-hidden">
+    <div className="h-screen bg-gradient-to-br from-teal-900 via-cyan-900 to-emerald-900 flex flex-col relative overflow-hidden">
       <UniversalBackground variant="constellation" />
 
       <ChatHeader
@@ -136,7 +136,7 @@ const MentorChatPage = React.memo(function MentorChatPage() {
 
 export default function MentorChatPageWrapper() {
   return (
-    <ProtectedRoute requireAuth={true} requireRole="child">
+    <ProtectedRoute requireAuth={true}>
       <MentorChatPage />
     </ProtectedRoute>
   )

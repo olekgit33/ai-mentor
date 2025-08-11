@@ -10,7 +10,7 @@ export const LoadingSpinner = ({
 }: LoadingSpinnerProps) => {
   return (
     // Gradient background container
-    <div className={`min-h-screen bg-gradient-to-br from-purple-400 via-pink-500 to-blue-500 flex items-center justify-center ${className}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-teal-500 via-cyan-600 to-emerald-600 flex items-center justify-center ${className}`}>
       <div className="text-center">
         {/* Animated spinner circle */}
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mb-4 mx-auto"></div>

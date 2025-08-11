@@ -33,7 +33,7 @@ const ChatMessage = memo(({ role, content, timestamp, isMobile = false }: ChatMe
         {/* AI assistant avatar and name badge */}
         {role === 'assistant' && (
           <div className="flex items-center space-x-2 mb-2">
-            <div className="w-5 h-5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xs">
+            <div className="w-5 h-5 bg-gradient-to-r from-teal-600 to-emerald-600 rounded-full flex items-center justify-center text-xs">
               🌟
             </div>
             <span className="text-xs font-medium text-purple-600">Astra</span>

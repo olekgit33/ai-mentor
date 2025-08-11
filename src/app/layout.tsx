@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { SessionDebugger } from "@/components";
+import brand from "@/brand/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ONE EDU - AI Mentor for Kids",
+  title: `${brand.name} - AI Mentor for Kids`,
   description: "Voice-powered AI mentor helping kids aged 8-13 learn real-world life skills",
 };
 

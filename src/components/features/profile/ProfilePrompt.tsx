@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'
+import brand from '@/brand/config'
 import { useNavigation } from '@/hooks'
 
 interface ProfilePromptProps {
@@ -17,7 +18,7 @@ const ProfilePrompt: React.FC<ProfilePromptProps> = ({
   const { navigateTo } = useNavigation()
   
   const containerClasses = fullScreen 
-    ? "min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex items-center justify-center p-2 sm:p-4 relative overflow-hidden"
+    ? `min-h-screen bg-gradient-to-br ${brand.colors.backgroundFrom} ${brand.colors.backgroundVia} ${brand.colors.backgroundTo} flex items-center justify-center p-2 sm:p-4 relative overflow-hidden`
     : `flex items-center justify-center p-2 sm:p-4 relative ${className}`
 
   return (
@@ -98,7 +99,7 @@ const ProfilePrompt: React.FC<ProfilePromptProps> = ({
                 <span 
                   className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform duration-300"
                   onClick={() => router.push('/')}
-                > ONE EDU</span>!
+                > {brand.name}</span>!
               </h2>
               
               <p className="text-white/90 text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 leading-relaxed">

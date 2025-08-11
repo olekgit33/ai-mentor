@@ -14,7 +14,7 @@ const PowerLevelCard: React.FC<PowerLevelCardProps> = ({ dashboardData }) => {
   return (
     <div className="relative bg-black/30 backdrop-blur-lg rounded-xl p-4 sm:p-6 shadow-2xl border border-white/10">
       {/* Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-blue-500/20 rounded-xl blur-xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 via-cyan-500/20 to-emerald-500/20 rounded-xl blur-xl"></div>
       
       <div className="relative z-10">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 sm:mb-6">

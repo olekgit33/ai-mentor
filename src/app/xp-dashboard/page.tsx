@@ -284,7 +284,7 @@ const XPDashboard = React.memo(function XPDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-teal-900 via-cyan-900 to-emerald-900 relative overflow-hidden">
       <UniversalBackground />
       
       <DashboardHeader onSignOut={handleSignOut} />
